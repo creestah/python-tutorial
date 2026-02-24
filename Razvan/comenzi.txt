@@ -1,2 +1,2 @@
-g++ program.cpp -o myProgram
-./myProgram
+g++ main.cpp -o Snake
+./Snake
