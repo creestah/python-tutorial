@@ -8,7 +8,11 @@ using namespace std;
 struct Vec2 { int x, y; };
 
 void clearScreen() {
+#ifdef _WIN32
     system("cls");
+#else
+    system("clear");
+#endif
 }
 
 void drawBoard( int w, int h, Vec2 head) {
