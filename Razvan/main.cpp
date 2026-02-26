@@ -268,7 +268,7 @@ int main() {
 
     // Board size
     const int boardWidth = 30;
-    const int boardHeight = 12;
+    const int boardHeight = 16;
 
     // Game speed (lower = faster)
     const int millisecondsPerTick = 160;
