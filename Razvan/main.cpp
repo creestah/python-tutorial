@@ -78,6 +78,22 @@ Vec2 NextPosition (Direction dir, Vec2 head) {
     return head;
 }
 
+bool IsOpposite (Direction dir1, Direction dir2) {
+    if (dir1 == Direction::Up && dir2 == Direction::Down) {
+        return true;
+    }
+    if (dir1 == Direction::Down && dir2 == Direction::Up) {
+        return true;
+    }
+    if (dir1 == Direction::Left && dir2 == Direction::Right) {
+        return true;
+    }
+    if (dir1 == Direction::Right && dir2 == Direction::Left) {
+        return true;
+    }
+    return false;
+}
+
 Direction KeyToDirection (Direction current, char c) {
     Direction wanted = current;
 
@@ -115,22 +131,6 @@ Vec2 WrapAtWall (Vec2 head, int boardWidth, int boardHeight) {
         head.y = boardHeight - 1;
     }
     return head;
-}
-
-bool IsOpposite (Direction dir1, Direction dir2) {
-    if (dir1 == Direction::Up && dir2 == Direction::Down) {
-        return true;
-    }
-    if (dir1 == Direction::Down && dir2 == Direction::Up) {
-        return true;
-    }
-    if (dir1 == Direction::Left && dir2 == Direction::Right) {
-        return true;
-    }
-    if (dir1 == Direction::Right && dir2 == Direction::Left) {
-        return true;
-    }
-    return false;
 }
 
 int main() {
